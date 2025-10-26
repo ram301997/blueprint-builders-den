@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import bombayLogo from "@/assets/bombay-logo.png";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,7 +25,12 @@ const Navigation = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center">
+          <Link to="/" className="flex items-center gap-3">
+            <img 
+              src={bombayLogo} 
+              alt="Bombay Bistro Logo" 
+              className="h-12 w-12"
+            />
             <h1 className="font-playfair text-3xl font-bold text-primary">
               Bombay Bistro
             </h1>
