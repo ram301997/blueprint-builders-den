@@ -14,7 +14,6 @@ const Menu = () => {
       {
         name: "Samosa",
         description: "Fried vegetables and potato pockets",
-        price: "$8.99",
         vegetarian: true,
         spicy: 1,
         image: "/images/samosa.jpg"
