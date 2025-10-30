@@ -7,30 +7,46 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
 const Menu = () => {
-  const categories = ["Appetizers", "Main Courses", "Vegetable Dishes", "Breads", "Desserts", "Beverages"];
+  const categories = ["Appetizers", "Vegetable Dishes", "Indian Specialties", "Biryani", "Breads", "Drinks & Desserts"];
 
   const menuItems = {
     Appetizers: [
       {
-        name: "Samosa (3pcs)",
-        description: "Crispy pastry filled with spiced potatoes and peas",
+        name: "Samosa",
+        description: "Fried vegetables and potato pockets",
         price: "$8.99",
+        vegetarian: true,
+        spicy: 1,
+        image: "/images/samosa.jpg"
+      },
+      {
+        name: "Sreekand Samosa",
+        description: "Broken samosas mixed with peas & chickpeas, topped with chutneys",
+        price: "$13.99",
         vegetarian: true,
         spicy: 1,
       },
       {
-        name: "Cauliflower Gobi Wings",
-        description: "Broken samosa mixed with chickpeas & chutneys",
+        name: "Cauliflower 65",
+        description: "Crispy fried cauliflower tossed in Indian spices",
+        price: "$17.99",
+        vegetarian: true,
+        spicy: 2,
+        image: "/images/cauliflower-65.jpg"
+      },
+      {
+        name: "Gobi Manchurian",
+        description: "Indo-Chinese crispy cauliflower in tangy sauce",
         price: "$17.99",
         vegetarian: true,
         spicy: 2,
       },
       {
-        name: "Chicken Wings",
-        description: "Tandoori-spiced chicken wings",
-        price: "$17.99",
+        name: "Chicken 65",
+        description: "Marinated boneless chicken tossed in Indian spices",
+        price: "$19.99",
         vegetarian: false,
-        spicy: 2,
+        spicy: 3,
       },
       {
         name: "Chicken Pakora",
@@ -40,229 +56,315 @@ const Menu = () => {
         spicy: 2,
       },
       {
-        name: "Breaded Shrimp",
-        description: "Lightly breaded shrimp with herbs",
-        price: "$18.99",
+        name: "Chicken Tikka",
+        description: "Grilled chicken marinated in yogurt and spices",
+        price: "$19.99",
         vegetarian: false,
-        spicy: 1,
+        spicy: 2,
+        image: "/images/chicken-tikka.jpg"
       },
       {
         name: "Tandoori Chicken",
-        description: "Grilled chicken marinated in yogurt & spices",
+        description: "Marinated chicken baked in a tandoor oven",
         price: "$22.99",
         vegetarian: false,
         spicy: 2,
+        image: "/images/tandoori-chicken.jpg"
       },
-    ],
-    "Main Courses": [
       {
-        name: "Butter Chicken",
-        description: "Boneless marinated chicken in tomato curry",
-        price: "$23.99",
-        vegetarian: false,
+        name: "Garlic Cauliflower Bhaji",
+        description: "Cauliflower cooked with garlic and spices",
+        price: "$19.99",
+        vegetarian: true,
         spicy: 2,
       },
       {
-        name: "Chicken Tikka Masala",
-        description: "Boneless chicken in rich tomato gravy",
-        price: "$23.99",
-        vegetarian: false,
-        spicy: 2,
-      },
-      {
-        name: "Chicken Korma",
-        description: "Boneless chicken in mild spices & creamy sauce",
-        price: "$23.99",
-        vegetarian: false,
-        spicy: 1,
-      },
-      {
-        name: "Chicken Palak",
-        description: "Chicken & spinach cooked in aromatic spices",
-        price: "$23.99",
-        vegetarian: false,
-        spicy: 2,
-      },
-      {
-        name: "Shrimp Phungi",
-        description: "Shrimp cooked in rich Indian herbs",
-        price: "$23.99",
-        vegetarian: false,
-        spicy: 2,
-      },
-      {
-        name: "Lamb Rogan",
-        description: "Lamb cooked in mild gravy",
-        price: "$23.99",
-        vegetarian: false,
-        spicy: 2,
-      },
-      {
-        name: "Lamb Phuna",
-        description: "Lamb cooked in onion gravy",
-        price: "$23.99",
-        vegetarian: false,
-        spicy: 3,
-      },
-      {
-        name: "Goat Curry",
-        description: "Goat meat in traditional Indian spices",
-        price: "$23.99",
-        vegetarian: false,
-        spicy: 3,
-      },
-      {
-        name: "Goat Roganjosh",
-        description: "Goat in aromatic spices",
-        price: "$23.99",
-        vegetarian: false,
-        spicy: 3,
-      },
-    ],
-    "Vegetable Dishes": [
-      {
-        name: "Black Dal",
-        description: "Black lentils cooked with rice",
+        name: "Beetroot Chaat",
+        description: "Tossed with crunchy wafers, chickpeas & tangy sauce",
         price: "$19.99",
         vegetarian: true,
         spicy: 1,
       },
       {
-        name: "Smoked Yellow Dal",
-        description: "Yellow lentils with mild spices",
-        price: "$20.99",
+        name: "Black Daal",
+        description: "Black lentils slow-cooked with butter and cream",
+        price: "$19.99",
         vegetarian: true,
         spicy: 1,
       },
       {
-        name: "Baigan Bhartha",
-        description: "Grilled eggplant with onion and tomato",
-        price: "$20.99",
+        name: "Dahi Vada",
+        description: "Lentil dumplings in creamy yogurt",
+        price: "$15.99",
         vegetarian: true,
+        spicy: 0,
+      },
+      {
+        name: "Veg Hakka Noodles",
+        description: "Stir-fried noodles with vegetables",
+        price: "$21.99",
+        vegetarian: true,
+        spicy: 1,
+      },
+      {
+        name: "Vegetable Fried Rice",
+        description: "Aromatic rice with mixed vegetables",
+        price: "$17.99",
+        vegetarian: true,
+        spicy: 1,
+      },
+      {
+        name: "Egg Bhurji",
+        description: "Scrambled eggs with Indian spices",
+        price: "$17.99",
+        vegetarian: false,
         spicy: 2,
       },
+    ],
+    "Vegetable Dishes": [
       {
-        name: "Aloo Mutter",
-        description: "Potatoes & peas in curry sauce",
-        price: "$20.99",
-        vegetarian: true,
-        spicy: 1,
-      },
-      {
-        name: "Malai Kofta",
-        description: "Vegetable dumplings in creamy sauce",
+        name: "Tofu or Paneer Wings",
+        description: "Crispy wings with Indian spices",
         price: "$22.99",
-        vegetarian: true,
-        spicy: 1,
-      },
-      {
-        name: "Paneer Masala",
-        description: "Cottage cheese in mild Indian spices",
-        price: "$20.99",
         vegetarian: true,
         spicy: 2,
       },
       {
         name: "Chana Masala",
-        description: "Chickpeas in aromatic spices",
+        description: "Chickpeas cooked with mild Indian spices",
+        price: "$19.99",
+        vegetarian: true,
+        spicy: 2,
+      },
+      {
+        name: "Aloo Gobi",
+        description: "Potatoes and cauliflower cooked with mild spices",
+        price: "$20.99",
+        vegetarian: true,
+        spicy: 1,
+      },
+      {
+        name: "Mixed Vegetable Curry",
+        description: "Seasonal vegetables in aromatic curry",
         price: "$20.99",
         vegetarian: true,
         spicy: 2,
       },
       {
         name: "Palak Paneer",
-        description: "Cottage cheese in spinach gravy",
-        price: "$20.99",
+        description: "Cottage cheese in creamy spinach gravy",
+        price: "$22.99",
+        vegetarian: true,
+        spicy: 1,
+        image: "/images/palak-paneer.jpg"
+      },
+      {
+        name: "Paneer Tikka Masala",
+        description: "Cottage cheese in rich tomato gravy",
+        price: "$22.99",
+        vegetarian: true,
+        spicy: 2,
+        image: "/images/paneer-tikka-masala.jpg"
+      },
+      {
+        name: "Paneer Butter Masala",
+        description: "Cottage cheese in creamy butter sauce",
+        price: "$22.99",
         vegetarian: true,
         spicy: 1,
       },
       {
-        name: "Tofu Tikka Masala",
-        description: "Tofu in rich tomato sauce",
+        name: "Paneer Kadai",
+        description: "Cottage cheese with bell peppers in spicy gravy",
+        price: "$22.99",
+        vegetarian: true,
+        spicy: 2,
+      },
+      {
+        name: "Vegetable Korma",
+        description: "Mixed vegetables in mild creamy sauce",
         price: "$20.99",
         vegetarian: true,
+        spicy: 1,
+      },
+    ],
+    "Indian Specialties": [
+      {
+        name: "Butter Chicken",
+        description: "Boneless marinated chicken cooked in tomato-based sauce",
+        price: "$23.99",
+        vegetarian: false,
+        spicy: 2,
+        image: "/images/butter-chicken.jpg"
+      },
+      {
+        name: "Chicken Tikka Masala",
+        description: "Cooked in Indian herbs",
+        price: "$23.99",
+        vegetarian: false,
+        spicy: 2,
+        image: "/images/chicken-tikka-masala.jpg"
+      },
+      {
+        name: "Chicken Kadai",
+        description: "Cooked in aromatic spicy gravy",
+        price: "$23.99",
+        vegetarian: false,
+        spicy: 3,
+      },
+      {
+        name: "Chicken Curry",
+        description: "Cooked in mild Indian spices",
+        price: "$23.99",
+        vegetarian: false,
+        spicy: 2,
+      },
+      {
+        name: "Chicken Vindaloo",
+        description: "Cooked with spicy gravy",
+        price: "$23.99",
+        vegetarian: false,
+        spicy: 3,
+      },
+      {
+        name: "Goat Curry",
+        description: "Cooked in Indian herbs",
+        price: "$23.99",
+        vegetarian: false,
+        spicy: 3,
+      },
+      {
+        name: "Goat Kadai",
+        description: "Cooked in aromatic spicy gravy",
+        price: "$23.99",
+        vegetarian: false,
+        spicy: 3,
+      },
+      {
+        name: "Goat Vindaloo",
+        description: "Cooked in spicy gravy",
+        price: "$23.99",
+        vegetarian: false,
+        spicy: 3,
+      },
+      {
+        name: "Lamb Curry",
+        description: "Cooked with Indian herbs",
+        price: "$23.99",
+        vegetarian: false,
+        spicy: 2,
+      },
+      {
+        name: "Lamb Kadai",
+        description: "Cooked in aromatic spicy gravy",
+        price: "$23.99",
+        vegetarian: false,
+        spicy: 3,
+      },
+      {
+        name: "Lamb Vindaloo",
+        description: "Cooked in spicy gravy",
+        price: "$23.99",
+        vegetarian: false,
+        spicy: 3,
+      },
+      {
+        name: "Shrimp Curry",
+        description: "Cooked in Indian herbs",
+        price: "$23.99",
+        vegetarian: false,
+        spicy: 2,
+      },
+      {
+        name: "Shrimp Kadai",
+        description: "Cooked in aromatic spicy gravy",
+        price: "$23.99",
+        vegetarian: false,
+        spicy: 3,
+      },
+      {
+        name: "Shrimp Vindaloo",
+        description: "Cooked in spicy gravy",
+        price: "$23.99",
+        vegetarian: false,
+        spicy: 3,
+      },
+    ],
+    Biryani: [
+      {
+        name: "Chicken Biryani",
+        description: "Fragrant basmati rice with marinated chicken and aromatic spices",
+        price: "$22.00",
+        vegetarian: false,
+        spicy: 2,
+        image: "/images/chicken-biryani.jpg"
+      },
+      {
+        name: "Lamb Biryani",
+        description: "Aromatic rice dish with tender lamb and spices",
+        price: "$22.00",
+        vegetarian: false,
+        spicy: 2,
+      },
+      {
+        name: "Veggie Biryani",
+        description: "Mixed vegetables with fragrant basmati rice",
+        price: "$22.00",
+        vegetarian: true,
+        spicy: 2,
+      },
+      {
+        name: "Fish Tikka Masala",
+        description: "Grilled fish in rich tikka masala sauce with rice",
+        price: "$23.99",
+        vegetarian: false,
+        spicy: 2,
+      },
+      {
+        name: "Shrimp Tikka Masala",
+        description: "Shrimp in creamy tikka masala with biryani rice",
+        price: "$23.99",
+        vegetarian: false,
         spicy: 2,
       },
     ],
     Breads: [
       {
         name: "Naan",
-        description: "Traditional Indian flatbread",
-        price: "$3.99",
+        description: "Traditional Indian flatbread baked in tandoor",
+        price: "$5.00",
         vegetarian: true,
         spicy: 0,
+        image: "/images/naan.jpg"
       },
       {
         name: "Garlic Naan",
-        description: "Naan topped with garlic and cilantro",
-        price: "$4.99",
+        description: "Naan topped with fresh garlic and cilantro",
+        price: "$6.00",
         vegetarian: true,
         spicy: 0,
-      },
-      {
-        name: "Roti",
-        description: "Whole wheat flatbread",
-        price: "$3.49",
-        vegetarian: true,
-        spicy: 0,
-      },
-      {
-        name: "Onion Chilli Salad",
-        description: "Fresh onion & chilli mix",
-        price: "$2.99",
-        vegetarian: true,
-        spicy: 2,
-      },
-      {
-        name: "Paneer Tikka Masala Kebab",
-        description: "Cottage cheese kebabs with spices",
-        price: "$22.99",
-        vegetarian: true,
-        spicy: 2,
+        image: "/images/garlic-naan.jpg"
       },
     ],
-    Desserts: [
-      {
-        name: "Rasmalai",
-        description: "Cottage cheese dumplings in sweet milk",
-        price: "$3.00",
-        vegetarian: true,
-        spicy: 0,
-      },
-      {
-        name: "Gulab Jamun",
-        description: "Sweet milk dumplings in rose syrup",
-        price: "$3.00",
-        vegetarian: true,
-        spicy: 0,
-      },
-      {
-        name: "Kulfi",
-        description: "Traditional Indian ice cream",
-        price: "$3.00",
-        vegetarian: true,
-        spicy: 0,
-      },
-    ],
-    Beverages: [
+    "Drinks & Desserts": [
       {
         name: "Mango Lassi",
-        description: "Yogurt drink with mango",
-        price: "$3.00",
+        description: "Creamy refreshing mango drink",
+        price: "$9.00",
         vegetarian: true,
         spicy: 0,
       },
       {
-        name: "Masala Chai",
-        description: "Spiced Indian tea",
-        price: "$3.99",
+        name: "Mysore Tea (Chai)",
+        description: "Indian spiced tea with milk",
+        price: "$8.00",
         vegetarian: true,
         spicy: 0,
       },
       {
-        name: "Sweet Lassi",
-        description: "Sweetened yogurt drink",
-        price: "$3.00",
+        name: "Butter Milk",
+        description: "Spiced yogurt drink",
+        price: "$8.00",
         vegetarian: true,
         spicy: 0,
       },
@@ -283,16 +385,74 @@ const Menu = () => {
       {
         name: "Bottled Sparkling Water",
         description: "Sparkling mineral water",
-        price: "$5.00",
+        price: "$6.00",
         vegetarian: true,
         spicy: 0,
       },
       {
         name: "King Fisher",
-        description: "Indian beer",
+        description: "Imported Indian beer",
         price: "$9.00",
         vegetarian: true,
         spicy: 0,
+      },
+      {
+        name: "Merlot",
+        description: "Full-bodied red wine",
+        price: "$8.00",
+        vegetarian: true,
+        spicy: 0,
+      },
+      {
+        name: "Cabernet Sauvignon",
+        description: "Rich red wine",
+        price: "$8.00",
+        vegetarian: true,
+        spicy: 0,
+      },
+      {
+        name: "Pinot Noir",
+        description: "Light red wine",
+        price: "$8.00",
+        vegetarian: true,
+        spicy: 0,
+      },
+      {
+        name: "Chardonnay",
+        description: "Classic white wine",
+        price: "$8.00",
+        vegetarian: true,
+        spicy: 0,
+      },
+      {
+        name: "Prosecco",
+        description: "Italian sparkling wine",
+        price: "$8.00",
+        vegetarian: true,
+        spicy: 0,
+      },
+      {
+        name: "Mimosa",
+        description: "Champagne with orange juice",
+        price: "$10.00",
+        vegetarian: true,
+        spicy: 0,
+      },
+      {
+        name: "Rasmalai",
+        description: "Soft cottage cheese soaked in sweetened milk flavored with rose",
+        price: "$8.00",
+        vegetarian: true,
+        spicy: 0,
+        image: "/images/rasmalai.jpg"
+      },
+      {
+        name: "Gulab Jamun",
+        description: "Small fried pillows of dough soaked in rose-flavored syrup",
+        price: "$8.00",
+        vegetarian: true,
+        spicy: 0,
+        image: "/images/gulab-jamun.jpg"
       },
     ],
   };
@@ -309,9 +469,9 @@ const Menu = () => {
           </p>
 
           <Tabs defaultValue="Appetizers" className="w-full">
-            <TabsList className="grid w-full grid-cols-2 lg:grid-cols-6 mb-8">
+            <TabsList className="grid w-full grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 mb-8 h-auto gap-2">
               {categories.map((category) => (
-                <TabsTrigger key={category} value={category}>
+                <TabsTrigger key={category} value={category} className="whitespace-normal py-3">
                   {category}
                 </TabsTrigger>
               ))}
@@ -319,9 +479,18 @@ const Menu = () => {
 
             {categories.map((category) => (
               <TabsContent key={category} value={category}>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {menuItems[category as keyof typeof menuItems].map((item, index) => (
-                    <Card key={index}>
+                    <Card key={index} className="overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                      {item.image && (
+                        <div className="h-48 overflow-hidden">
+                          <img 
+                            src={item.image} 
+                            alt={item.name}
+                            className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                          />
+                        </div>
+                      )}
                       <CardContent className="p-6">
                         <div className="flex justify-between items-start mb-3">
                           <h3 className="font-playfair text-2xl font-bold">{item.name}</h3>
